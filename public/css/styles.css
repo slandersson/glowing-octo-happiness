@@ -1,0 +1,51 @@
+* {
+    font-family: 'Ubuntu', sans-serif;
+}
+body {
+  background-color: #f2ecde;
+}
+
+.hero {
+  background-image: url(../img/rainylords.jpg);
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center center;
+  padding: 50px;
+  min-height: 750px;
+  position:relative;
+}
+.container{
+  background-color: #f2ecde;
+}
+.jumbotron{
+  background-color: #f2ecde;
+  font-family: 'Ubuntu', sans-serif;
+}
+.hero-content {
+  position:absolute;
+  top: 50%;
+  text-align: center;
+  width:92%;
+}
+
+.hero-content h2 {
+ color: #FFF;
+ font-size: 80px
+}
+
+.hero-content p {
+ color: #FFF;
+ font-size: 40px;
+ margin-bottom: 30px;
+}
+
+.hero-content .btn {
+ border-radius: 2px;
+ padding: 20px 30px;
+ background-color: #5d2f1d;
+ border-color: #684905;
+}
+footer {
+  text-align: right;
+  padding-right: 30px;
+}
