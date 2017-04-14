@@ -5,33 +5,33 @@
     <link rel="stylesheet" type="text/css" href="http://fonts.googleapis.com/css?family=Ubuntu:regular,bold&subset=Latin">
     <link rel="stylesheet" href = "/css/styles.css">
     <script src="/js/jquery-3.2.1.min.js"></script>
+    <script src="/js/yrno-getter.js"></script>
 </head>
+
 <body>
 
 
 <main>
-
-
+<table id="table">
+  <tr>
+    <td>
+      Reading
+    </td>
+    <td id="reading">
 <script>
-  $.getJSON( "json?lat=51.4543&lon=0.9781", function( data ) {
-    var length = data.length;
-    var today = new Date();
-    var date = today.getFullYear()+'-'+(today.getMonth()+1)+'-'+today.getDate();
-
-    for ( var i=0; i<data.length; i++){ //for entry in json
-      var fromdate = data[i]["from"];
-      var myDate = new Date()  //turn the date string to a date format so we can check when saturday is
-      myDate.setFullYear(fromdate.substring(0,4));
-      myDate.setMonth(parseInt(fromdate.substring(5,7))-1); //javascript months count from january = zero
-      myDate.setDate(fromdate.substring(8,10));
-      if (myDate.getDay() == 6) {  //check for saturday
-        console.log(data[i])
-      }
-    }
-})
-
-
+weatherlookup("#reading","lat=51.4543&lon=0.9781")
 </script>
+</td>
+</tr>
+<tr>
+  <td>
+    Wokingham
+  </td>
+</tr>
+
+</table>
+
+</main>
 
   </main>
 <footer>
