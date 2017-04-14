@@ -11,10 +11,13 @@ router.get('/', function(req,res) {
   res.sendFile(path.join(__dirname, '../public/index.html'))
 });
 
+
 router.get('/begin', function(req,res) {
   res.sendFile(path.join(__dirname, '../public/begin.html'))
 });
 
+
+// json file from URL lat + long. The available options are:
 router.get('/json', function(req,res) {
   yrno.getWeather({
   lat: req.query.lat,
