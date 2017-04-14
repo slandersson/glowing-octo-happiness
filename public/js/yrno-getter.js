@@ -17,10 +17,10 @@ function weatherlookup(tableID, lonlat) {
         items = []
         var items = [];
         $.each( data[i], function( key, val ) {
-          items.push( "<li id='" + key + "'>" + val + "</li>" );
+          items.push( "<td>" + val + "</td>" );
         });
 
-        $( "<ul/>", {
+        $( "<td/>", {
           "class": "my-new-list",
           html: items.join( "" )
         }).appendTo( tableID );

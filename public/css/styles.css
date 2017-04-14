@@ -5,6 +5,13 @@ body {
   background-color: #f2ecde;
 }
 
+td, th {
+    padding: 8px;
+}
+.place{
+  font-weight: bold;
+}
+
 .hero {
   background-image: url(../img/rainylords.jpg);
   background-repeat: no-repeat;
