@@ -29,7 +29,7 @@ router.get('/json', function(req,res) {
   lon: req.query.lon
   }, function(err, weather) {
   // Weather for next five days (Array with five object)
-  weather.getSevenDaySummary(function(err, summary) {
+  weather.getFiveDaySummary(function(err, summary) {
     res.json(summary)
   })
 });
