@@ -9,111 +9,110 @@
 </head>
 
 <body>
-      <a href="/" class="btn btn-primary" role="button">Back</a>
+    <a href="/" class="btn btn-primary" id="backbutton" role="button">Back</a>
     <div class="container">
-      <h1>TVL3A</h1>The forecast for Saturday
-      <div class="row">
-        <div class="col-sm-10"></div>
-        <table id="table" class="table table-hover">
-            <thead>
-                <tr>
-                    <th>Place</th>
-                    <th>Weather</th>
-                    <th>Total rainfall</th>
-                    <th>Temperature</th>
-                    <th>Pressure</th>
-                    <th>Cloud cover</th>
-                </tr>
-            </thead>
-            <tbody>
-                <tr id="wokingham">
-                    <td class="place">
-                        Wokingham
-                        <script>
-                            weatherlookup("#wokingham", "lat=51.417304&lon=-0.876487")
-                        </script>
-                    </td>
-                </tr>
-                <tr id="Chiswick">
-                    <td class="place">
-                        Chiswick
-                        <script>
-                            weatherlookup("#Chiswick", "lat=51.483510&lon=-0.263249")
-                        </script>
-                    </td>
-                </tr>
-                <tr id="Cove">
-                    <td class="place">
-                        Cove
-                        <script>
-                            weatherlookup("#Cove", "lat=51.292911&lon=-0.777580")
-                        </script>
-                    </td>
-                </tr>
-                <tr id="Falkland">
-                    <td class="place">
-                        Falkland
-                        <script>
-                            weatherlookup("#Falkland", "lat=51.378704&lon=-1.352853")
-                        </script>
-                    </td>
-                </tr>
-                <tr id="Finchampstead">
-                    <td class="place">
-                        Finchampstead
-                        <script>
-                            weatherlookup("#Finchampstead", "lat=51.362455&lon=-0.863435")
-                        </script>
-                    </td>
-                </tr>
-                <tr id="Fleet">
-                    <td class="place">
-                        Fleet
-                        <script>
-                            weatherlookup("#Fleet", "lat=51.278655&lon=-0.848606")
-                        </script>
-                    </td>
-                </tr>
-                <tr id="Newbury">
-                    <td class="place">
-                        Newbury
-                        <script>
-                            weatherlookup("#Newbury", "lat=51.402232&lon=-1.330896")
-                        </script>
-                    </td>
-                </tr>
-                <tr id="Purley-on-Thames">
-                    <td class="place">
-                        Purley-on-Thames
-                        <script>
-                            weatherlookup("#Purley-on-Thames", "lat=51.479543&lon=-1.057011")
-                        </script>
-                    </td>
-                </tr>
-                <tr id="Wargrave">
-                    <td class="place">
-                        Wargrave
-                        <script>
-                            weatherlookup("#Wargrave", "lat=51.500467&lon=-0.858342")
-                        </script>
-                    </td>
-                </tr>
-                <tr id="Yateley">
-                    <td class="place">
-                        Yateley
-                        <script>
-                            weatherlookup("#Yateley", "lat=51.342830&lon=-0.826481")
-                        </script>
-                    </td>
-                </tr>
-            </tbody>
-        </table>
-  </div>
-</div>
+        <h1>TVL3A</h1>The forecast for Saturday
+        <div class="row">
+            <div class="col-sm-10"></div>
+            <table id="table" class="table table-hover">
+                <thead>
+                    <tr>
+                        <th>Place</th>
+                        <th>Weather</th>
+                        <th>Total rainfall</th>
+                        <th>Temperature</th>
+                        <th>Pressure</th>
+                        <th>Cloud cover</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr id="wokingham">
+                        <td class="place">
+                            Wokingham
+                            <script>
+                                weatherlookup("#wokingham", "lat=51.417304&lon=-0.876487")
+                            </script>
+                        </td>
+                    </tr>
+                    <tr id="Chiswick">
+                        <td class="place">
+                            Chiswick
+                            <script>
+                                weatherlookup("#Chiswick", "lat=51.483510&lon=-0.263249")
+                            </script>
+                        </td>
+                    </tr>
+                    <tr id="Cove">
+                        <td class="place">
+                            Cove
+                            <script>
+                                weatherlookup("#Cove", "lat=51.292911&lon=-0.777580")
+                            </script>
+                        </td>
+                    </tr>
+                    <tr id="Falkland">
+                        <td class="place">
+                            Falkland
+                            <script>
+                                weatherlookup("#Falkland", "lat=51.378704&lon=-1.352853")
+                            </script>
+                        </td>
+                    </tr>
+                    <tr id="Finchampstead">
+                        <td class="place">
+                            Finchampstead
+                            <script>
+                                weatherlookup("#Finchampstead", "lat=51.362455&lon=-0.863435")
+                            </script>
+                        </td>
+                    </tr>
+                    <tr id="Fleet">
+                        <td class="place">
+                            Fleet
+                            <script>
+                                weatherlookup("#Fleet", "lat=51.278655&lon=-0.848606")
+                            </script>
+                        </td>
+                    </tr>
+                    <tr id="Newbury">
+                        <td class="place">
+                            Newbury
+                            <script>
+                                weatherlookup("#Newbury", "lat=51.402232&lon=-1.330896")
+                            </script>
+                        </td>
+                    </tr>
+                    <tr id="Purley-on-Thames">
+                        <td class="place">
+                            Purley-on-Thames
+                            <script>
+                                weatherlookup("#Purley-on-Thames", "lat=51.479543&lon=-1.057011")
+                            </script>
+                        </td>
+                    </tr>
+                    <tr id="Wargrave">
+                        <td class="place">
+                            Wargrave
+                            <script>
+                                weatherlookup("#Wargrave", "lat=51.500467&lon=-0.858342")
+                            </script>
+                        </td>
+                    </tr>
+                    <tr id="Yateley">
+                        <td class="place">
+                            Yateley
+                            <script>
+                                weatherlookup("#Yateley", "lat=51.342830&lon=-0.826481")
+                            </script>
+                        </td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+    </div>
     <footer>
-        Data from yr.no. Simon Andersson 2017
+        <a href="https://github.com/slandersson">github</a>
     </footer>
-    </script>
 </body>
 
 </html>

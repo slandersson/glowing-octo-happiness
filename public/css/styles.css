@@ -1,76 +1,94 @@
 * {
     font-family: 'Ubuntu', sans-serif;
 }
+
 body {
-  background-color: #fffdf9;
+    background-color: #fffdf9;
 }
+
 h1 {
-  font-size: 50px;
+    font-size: 50px;
 }
+
 .dropdown-menu {
-  left: 50%;
-  right: auto;
-  transform: translate(-47%, 0);
+    left: 50%;
+    right: auto;
+    transform: translate(-47%, 0);
 }
+
 .table {
-  text-align: center;
-  width: auto;
+    text-align: center;
+    width: auto;
 }
+
 td, th {
     padding: 8px;
     width: auto;
     text-align: center;
 }
+
 th {
-  font-size: 20px
+    font-size: 20px
 }
-.place{
-  font-weight: bold;
+
+.place {
+    font-weight: bold;
 }
+
 .modal-dialog {
     top: 30%;
 }
+
 .hero {
-  background-image: url(../img/rainylords.jpg);
-  background-repeat: no-repeat;
-  background-size: cover;
-  background-position: center center;
-  padding: 50px;
-  min-height: 100%;
-  position:relative;
+    background-image: url(../img/rainylords.jpg);
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center center;
+    padding: 50px;
+    min-height: 100%;
+    position: relative;
 }
-.container{
-  background-color: #fffdf9;
+
+.container {
+    background-color: #fffdf9;
 }
-.jumbotron{
-  background-color: #fffdf9;
-  font-family: 'Ubuntu', sans-serif;
+
+.jumbotron {
+    background-color: #fffdf9;
+    font-family: 'Ubuntu', sans-serif;
 }
+
 .hero-content {
-  position:absolute;
-  top: 40%;
-  text-align: center;
-  width:92%;
+    position: absolute;
+    top: 40%;
+    text-align: center;
+    width: 92%;
 }
 
 .hero-content h2 {
- color: #FFF;
- font-size: 80px
+    color: #FFF;
+    font-size: 80px
 }
 
 .hero-content p {
- color: #FFF;
- font-size: 40px;
- margin-bottom: 30px;
+    color: #FFF;
+    font-size: 40px;
+    margin-bottom: 30px;
 }
 
-.btn {
- border-radius: 2px;
- padding: 20px 30px;
- background-color: #5d2f1d;
- border-color: #684905;
+#backbutton {
+    background-color: #5d2f1d;
+    border-color: #684905;
 }
+
+.hero-content .btn {
+    border-radius: 2px;
+    padding: 20px 30px;
+    background-color: #5d2f1d;
+    border-color: #684905;
+}
+
 footer {
-  text-align: right;
-  padding-right: 30px;
+    text-align: right;
+    padding-right: 30px;
 }
