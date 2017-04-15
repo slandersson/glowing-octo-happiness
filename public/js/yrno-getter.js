@@ -1,4 +1,6 @@
 function weatherlookup(tableID, lonlat, place) {
+  $.getJSON('/js/icons.json', function(data) {
+      var icons = data;
   $.getJSON( "/json?" + lonlat , function( data ) {
     var length = data.length;
     var today = new Date();
@@ -17,7 +19,7 @@ function weatherlookup(tableID, lonlat, place) {
         items = []
         $.each( data[i], function( key, val ) {
           if (key == "icon"){
-            items.push( "<td>" + val + "</td>" ); //change this to the appropriate images
+            items.push( "<td>" + "<img alt="+val + " src="+"http://api.met.no/weatherapi/weathericon/1.1/?symbol="+icons[val]+";is_night=0;content_type=image/svg>" + "</td>" ); //change this to the appropriate images
           }
           else if (key == "rain") {
             rainvalue = parseFloat(data[i]["rain"].split(' mm')[0])
@@ -46,4 +48,5 @@ function weatherlookup(tableID, lonlat, place) {
       }
     }
 })
+});
 }

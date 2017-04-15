@@ -1,0 +1,50 @@
+<html>
+
+<head>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
+    <link rel="stylesheet" type="text/css" href="http://fonts.googleapis.com/css?family=Ubuntu:regular,bold&subset=Latin">
+    <link rel="stylesheet" href="/css/styles.css">
+    <script src="/js/jquery-3.2.1.min.js"></script>
+    <script src="/js/yrno-getter.js"></script>
+</head>
+
+<body>
+    <a href="/" class="btn btn-primary" id="backbutton" role="button">Home</a>
+    <div class="container">
+        <h1>TVL3A</h1>The forecast for Saturday. Colours are based on predicted rainfall.
+        <div class="row">
+            <div class="col-sm-10"></div>
+            <table id="table" class="table table-hover">
+                <thead>
+                    <tr>
+                        <th>Place</th>
+                        <th>Weather</th>
+                        <th>Rainfall</th>
+                        <th>Temperature</th>
+                        <th>Humidity</th>
+                        <th>Cloud cover</th>
+                    </tr>
+                </thead>
+                <tbody id="3A">
+                            <script>
+                                weatherlookup(tableID="#3A", lonlat="lat=51.417304&lon=-0.876487", place="Wokingham")
+                                weatherlookup("#3A", "lat=51.483510&lon=-0.263249", "Chiswick")
+                                weatherlookup("#3A", "lat=51.292911&lon=-0.777580", "Cove")
+                                weatherlookup("#3A", "lat=51.378704&lon=-1.352853", "Falkland")
+                                weatherlookup("#3A", "lat=51.362455&lon=-0.863435", "Finchampstead")
+                                weatherlookup("#3A", "lat=51.278655&lon=-0.848606", "Fleet")
+                                weatherlookup("#3A", "lat=51.402232&lon=-1.330896", "Newbury")
+                                weatherlookup("#3A", "lat=51.479543&lon=-1.057011", "Purley-on-Thames")
+                                weatherlookup("#3A", "lat=51.500467&lon=-0.858342", "Wargrave")
+                                weatherlookup("#3A", "lat=51.342830&lon=-0.826481", "Yateley")
+                                </script>
+                </tbody>
+            </table>
+        </div>
+    </div>
+    <footer>
+        <a href="https://github.com/slandersson">github</a>
+    </footer>
+</body>
+
+</html>
