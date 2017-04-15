@@ -1,8 +1,7 @@
-function weatherlookup(tableID, lonlat) {
+function weatherlookup(tableID, lonlat, place) {
   $.getJSON( "json?" + lonlat , function( data ) {
     var length = data.length;
     var today = new Date();
-
     var date = today.getFullYear()+'-'+(today.getMonth()+1)+'-'+today.getDate();
     for ( var i=0; i<data.length; i++){ //for entry in json
 
@@ -29,7 +28,7 @@ function weatherlookup(tableID, lonlat) {
         $.each( data[i], function( key, val ) {
           items.push( "<td>" + val + "</td>" );
         });
-        $(tableID).append(items);
+        $(tableID).append( "<tr>" + "<td>" +place+ "</td>" + items + "</tr>");
       }
       // if Sunday or Monday then there is no forecast data available
       var day = today.getDay()

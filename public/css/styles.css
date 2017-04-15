@@ -11,6 +11,7 @@ h1 {
 }
 
 .dropdown-menu {
+  font-size: 18px;
     left: 50%;
     right: auto;
     transform: translate(-47%, 0);
@@ -82,7 +83,7 @@ th {
 }
 
 .hero-content .btn {
-    border-radius: 2px;
+    border-radius: 4px;
     padding: 20px 30px;
     background-color: #5d2f1d;
     border-color: #684905;
