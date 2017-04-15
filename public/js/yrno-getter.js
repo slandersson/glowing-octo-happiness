@@ -27,10 +27,19 @@ function weatherlookup(tableID, lonlat, place) {
         var items = [];
         $.each( data[i], function( key, val ) {
           items.push( "<td>" + val + "</td>" );
-        });
-        $(tableID).append( "<tr>" + "<td>" +place+ "</td>" + items + "</tr>");
+        })
+        //set colors depending on the rain amount
+        rainvalue = parseFloat(data[i]["rain"].split(' mm')[0])
+        if ( rainvalue < 0.5 ) {
+          $(tableID).append( "<tr class = \"success\">" + "<td>" +place+ "</td>" + items + "</tr>");
+        }
+        else if ( rainvalue < 2 && rainvalue > 0.5 ) {
+          $(tableID).append( "<tr class = \"warning\">" + "<td>" +place+ "</td>" + items + "</tr>");
+        }
+        else if ( rainvalue > 2) {
+          $(tableID).append( "<tr class = \"danger\">" + "<td>" +place+ "</td>" + items + "</tr>");
+        }
       }
     }
-    //if (today == 7 || today == 1 || today == 2 | today ==  3 what if more than five days away.
 })
 }
