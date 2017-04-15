@@ -6,6 +6,13 @@
     margin:0px;
   }
 }
+
+.col-xs-12 {
+    width: 98%;
+    padding-left: 30px;
+}
+
+
 html, body {
   overflow-x: hidden;
 }
