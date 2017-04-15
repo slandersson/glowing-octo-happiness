@@ -36,9 +36,13 @@ h1 {
 }
 
 .icons {
-    height: 57px;
-    margin-top: -6px;
-    margin-bottom: -20px;
+  height: 57px;
+  margin-top: 3px;
+  margin-bottom: 0px;
+  width: 45px;
+  height: 45px;
+  margin-left: 0px;
+  margin-right: 0px
 }
 .dropdown-menu {
   font-size: 18px;
@@ -47,15 +51,14 @@ h1 {
     transform: translate(-47%, 0);
 }
 
-.table {
-  text-align: center;
+.table>tbody>tr>td {
+  vertical-align: middle;
   width: auto;
-  font-size: 22px;
+  font-size: 14px;
   height: 73%;
 }
 
 td {
-    padding: 5px;
     vertical-align: middle;
     width: auto;
     text-align: right;
@@ -68,7 +71,7 @@ th {
 }
 
 th {
-    font-size: 22px;
+    font-size: 14px;
     font-weight: normal
 }
 
