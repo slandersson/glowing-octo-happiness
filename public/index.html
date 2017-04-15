@@ -1,30 +1,75 @@
 <html>
 
 <head>
+    <script src="/js/jquery-3.2.1.min.js"></script>
+    <script src="http://netdna.bootstrapcdn.com/bootstrap/3.0.0/js/bootstrap.min.js"></script>
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
     <link rel="stylesheet" type="text/css" href="http://fonts.googleapis.com/css?family=Ubuntu:regular,bold&subset=Latin">
-    <link rel="stylesheet" href = "/css/styles.css">
+    <link rel="stylesheet" href="/css/styles.css">
 </head>
+
 <body>
-<section class ="hero">
-  <div class="hero-content">
-    <h2>Club Weather</h2>
-    <p> Click to get started</p>
-    <a href="/begin" class="btn btn-lg btn-primary">Get Started</a>
-  </div>
-</section>
+    <section class="hero">
+        <div class="hero-content">
+            <h2>Club Weather</h2>
+            <p>Will we play on Saturday?</p>
+            <div class="dropdown">
+                <button class="btn btn-primary dropdown-toggle" type="button" data-toggle="dropdown">
+                  Find out
+                  <span class="caret">
+                  </span>
+                </button>
+                <ul class="dropdown-menu dropdown-menu">
+                  <li class="dropdown-header">Thames Valley League</li>
+                    <li><a href="/tvl3a">3a</a></li>
+                    <li><a href="/tvl3a">3a</a></li>
+                    <li><a  href="#myModal" data-toggle="modal">Why is my div not here?</a></li
+                </ul>
+            </div>
+        </div>
+    </section>
 
 
-<main>
-  <div class = "container">
-    <<div class="jumbotron text-center">
-      This is a website to view the weather for all the clubs in your division. It pulls the data from <a href="https://www.yr.no/">yr.no</a>.
+    <div id="myModal" class="modal fade">
+    <div class="modal-dialog">
+    <div class="modal-content">
+        <div class="modal-header">
+            <button type="button" class="close" data-dismiss="modal" aria-hidden="true">&times;</button>
+            <h4 class="modal-title">Why is my division not showing?</h4>
+        </div>
+        <div class="modal-body">
+            <p>I'm pretty lazy and only added a few.</p>
+            <p> Contact me at <a href="mailto:webadmin@simonandersson.co.uk?Subject=Add%my%division%please" target="_top">webadmin@simonandersson.co.uk</a> and I will add it!</p>
+            <p> I'm more than happy to take any other suggestions too.</p>
+            <p class="text-warning">Thanks</p>
+        </div>
+        <div class="modal-footer">
+            <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+        </div>
     </div>
-  </div>
-  </main>
+    </div>
+    </div>
 
-<footer>
-  Simon Andersson 2017
-</footer>
+
+    <main>
+        <div class="container">
+            <<div class="jumbotron text-center">
+                This is a simple website to view the weather for <i>Saturday</i> for all the clubs in your division.<br>
+                It pulls the data from <a href="https://www.yr.no/">yr.no</a>. <br>
+                Written in js/html using node.js.
+        </div>
+        </div>
+    </main>
+    <script>
+        $(document).ready(function() {
+            $('.dropdown-toggle').dropdown();
+        });
+    </script>
+
+    <footer>
+        <a href="https://github.com/slandersson">github</a>
+    </footer>
+
 </body>
+
 </html>

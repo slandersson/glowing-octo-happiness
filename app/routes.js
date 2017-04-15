@@ -12,12 +12,17 @@ router.get('/', function(req,res) {
 });
 
 
-router.get('/begin', function(req,res) {
-  res.sendFile(path.join(__dirname, '../public/begin.html'))
+router.get('/tvl3a', function(req,res) {
+  res.sendFile(path.join(__dirname, '../public/tvl3a.html'))
 });
 
 
 // json file from URL lat + long. The available options are:
+// // Current conditions
+// location.getCurrentSummary(cb);
+// // Weather anytime from now till future
+// location.getForecastForTime(time, cb);
+
 router.get('/json', function(req,res) {
   yrno.getWeather({
   lat: req.query.lat,
@@ -28,4 +33,8 @@ router.get('/json', function(req,res) {
     res.json(summary)
   })
 });
+});
+
+router.get('/begin', function(req,res) {
+  res.sendFile(path.join(__dirname, '../public/begin.html'))
 });
