@@ -43,24 +43,24 @@ function weatherlookup(tableID, lonlat, place, yr) {
             items.push( "<td>" + rainvalue + "mm" + "</td>" );
           }
           else if (key == "temperature" ) {
-            items.push( "<td>" + val.split(' celsius')[0] + "°C" + "</td>" );
+            items.push( "<td>" + Math.round(val.split(' celsius')[0]) + "°C" + "</td>" );
           }
           else if ( key == "humidity" ) {
-            items.push( "<td>" + val.split(' percent')[0] + "%" + "</td>" );
+            items.push( "<td>" + Math.round(val.split(' percent')[0]) + "%" + "</td>" );
           }
           else if (key == "cloudiness") {
-            items.push( "<td>" + val + "</td>" );
+            items.push( "<td>" + Math.round(val.split('%')[0]) + "%" + "</td>" );
           }
         })
         //set colors of rows depending on the rain amount and then append
         if ( rainvalue < 0.5 ) {
-          $(tableID).append( "<tr class = \"success\">" + "<td>" +"<a href=https://www.yr.no/place/United_Kingdom/England/"+yr+"  target = \"_blank\">"+place+"</a></td>"+ "</td>" + items + "</tr>");
+          $(tableID).append( "<tr class = \"success\">" + "<td class = \"place\">" +"<a href=https://www.yr.no/place/United_Kingdom/England/"+yr+"  target = \"_blank\">"+place+"</a></td>"+ "</td>" + items + "</tr>");
         }
         else if ( rainvalue < 2 && rainvalue > 0.5 ) {
-          $(tableID).append( "<tr class = \"warning\">" + "<td>" +"<a href=https://www.yr.no/place/United_Kingdom/England/"+yr+" target = \"_blank\">"+place+"</a></td>" + items + "</tr>");
+          $(tableID).append( "<tr class = \"warning\">" + "<td class = \"place\">" +"<a href=https://www.yr.no/place/United_Kingdom/England/"+yr+" target = \"_blank\">"+place+"</a></td>" + items + "</tr>");
         }
         else if ( rainvalue > 2) {
-          $(tableID).append( "<tr class = \"danger\">" + "<td>" +"<a href=https://www.yr.no/place/United_Kingdom/England/"+yr+" target = \"_blank\">"+place+"</a></td>"+ "</td>" + items + "</tr>");
+          $(tableID).append( "<tr class = \"danger\">" + "<td class = \"place\">" +"<a href=https://www.yr.no/place/United_Kingdom/England/"+yr+" target = \"_blank\">"+place+"</a></td>"+ "</td>" + items + "</tr>");
         }
       }
     }
