@@ -1,5 +1,5 @@
 function weatherlookup(tableID, lonlat, place) {
-  $.getJSON( "json?" + lonlat , function( data ) {
+  $.getJSON( "/json?" + lonlat , function( data ) {
     var length = data.length;
     var today = new Date();
     var date = today.getFullYear()+'-'+(today.getMonth()+1)+'-'+today.getDate();
@@ -11,25 +11,29 @@ function weatherlookup(tableID, lonlat, place) {
       myDate.setMonth(parseInt(fromdate.substring(5,7))-1); //javascript months count from january = zero
       myDate.setDate(fromdate.substring(8,10));
 
-      //remove unncecessary data
-      delete data[i]["to"];
-      delete data[i]["from"];
-      delete data[i]["windDirection"];
-      delete data[i]["windSpeed"];
-      delete data[i]["humidity"];
-      delete data[i]["lowClouds"];
-      delete data[i]["dewpointTemperature"];
-      delete data[i]["mediumClouds"];
-      delete data[i]["highClouds"];
-      delete data[i]["fog"];
+      //fill an array to append to each row
+      //replace the data with nicer formats
       if (myDate.getDay() == 6) {  //check for saturday
         items = []
-        var items = [];
         $.each( data[i], function( key, val ) {
-          items.push( "<td>" + val + "</td>" );
+          if (key == "icon"){
+            items.push( "<td>" + val + "</td>" ); //change this to the appropriate images
+          }
+          else if (key == "rain") {
+            rainvalue = parseFloat(data[i]["rain"].split(' mm')[0])
+            items.push( "<td>" + rainvalue + "mm" + "</td>" );
+          }
+          else if (key == "temperature" ) {
+            items.push( "<td>" + val.split(' celsius')[0] + "°C" + "</td>" );
+          }
+          else if ( key == "humidity" ) {
+            items.push( "<td>" + val.split(' percent')[0] + "%" + "</td>" );
+          }
+          else if (key == "cloudiness") {
+            items.push( "<td>" + val + "</td>" );
+          }
         })
-        //set colors depending on the rain amount
-        rainvalue = parseFloat(data[i]["rain"].split(' mm')[0])
+        //set colors of rows depending on the rain amount and then append
         if ( rainvalue < 0.5 ) {
           $(tableID).append( "<tr class = \"success\">" + "<td>" +place+ "</td>" + items + "</tr>");
         }
