@@ -30,11 +30,6 @@ function weatherlookup(tableID, lonlat, place) {
         });
         $(tableID).append( "<tr>" + "<td>" +place+ "</td>" + items + "</tr>");
       }
-      // if Sunday or Monday then there is no forecast data available
-      var day = today.getDay()
-      if (day == 7 || day == 1 ) {
-        $(tableID).append("no data, please check closer to Saturday")
-      }
     }
     //if (today == 7 || today == 1 || today == 2 | today ==  3 what if more than five days away.
 })
