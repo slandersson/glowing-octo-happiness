@@ -19,7 +19,7 @@ function weatherlookup(tableID, lonlat, place) {
         items = []
         $.each( data[i], function( key, val ) {
           if (key == "icon"){
-            items.push( "<td>" + "<img style=\"icons\" alt="+val + " src="+"http://api.met.no/weatherapi/weathericon/1.1/?symbol="+icons[val]+";is_night=0;content_type=image/svg>" + "</td>" ); //change this to the appropriate images
+            items.push( "<td>" + "<img class=\"icons\" alt="+val + " src="+"http://api.met.no/weatherapi/weathericon/1.1/?symbol="+icons[val]+";is_night=0;content_type=image/svg>" + "</td>" ); //change this to the appropriate images
           }
           else if (key == "rain") {
             rainvalue = parseFloat(data[i]["rain"].split(' mm')[0])
