@@ -1,15 +1,27 @@
 {
   "name": "weatherclubs",
   "version": "1.0.0",
-  "description": "",
+  "description": "Another node js app. In development at the moment. Pulls weather data from yr.no",
   "main": "server.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "node server.js"
   },
   "author": "",
   "license": "ISC",
   "dependencies": {
     "express": "^4.15.2",
     "nodemon": "^1.11.0"
-  }
+  },
+  "devDependencies": {
+    "mocha": "^3.2.0"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/slandersson/glowing-octo-happiness.git"
+  },
+  "bugs": {
+    "url": "https://github.com/slandersson/glowing-octo-happiness/issues"
+  },
+  "homepage": "https://github.com/slandersson/glowing-octo-happiness#readme"
 }
