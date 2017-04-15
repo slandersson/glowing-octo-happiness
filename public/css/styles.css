@@ -29,7 +29,7 @@ body {
 }
 
 .sub {
-  font-size: 20px;
+  font-size: 14px;
 }
 h1 {
     font-size: 60px;
@@ -37,8 +37,8 @@ h1 {
 
 .icons {
     height: 57px;
-    margin-top: -13px;
-    margin-bottom: -2px;
+    margin-top: -6px;
+    margin-bottom: -20px;
 }
 .dropdown-menu {
   font-size: 18px;
@@ -55,7 +55,8 @@ h1 {
 }
 
 td {
-    padding: 8px;
+    padding: 5px;
+    vertical-align: middle;
     width: auto;
     text-align: right;
 }
@@ -123,7 +124,7 @@ th {
 #backbutton {
     background-color: #5d2f1d;
     border-color: #684905;
-    font-size: 30;
+    font-size: 18px;
 }
 
 .hero-content .btn {
