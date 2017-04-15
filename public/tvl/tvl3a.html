@@ -11,8 +11,9 @@
 <body>
     <a href="/" class="btn btn-primary" id="backbutton" role="button">Home</a>
     <div class="container">
-        <h1>TVL3A</h1>The forecast for Saturday. Colours are based on predicted rainfall.<br>
-        Weather forecast from Yr, delivered by the Norwegian Meteorological Institute and NRK
+        <h1>TVL3A</h1>
+        <p class="sub" id="date"></p>
+        <p class="sub">Weather forecast from Yr, delivered by the Norwegian Meteorological Institute and NRK</p>
         <div class="row">
             <div class="col-sm-10"></div>
             <table id="table" class="table table-hover">
@@ -28,6 +29,7 @@
                 </thead>
                 <tbody id="3A">
                             <script>
+                                var counter =0;
                                 weatherlookup(tableID="#3A", lonlat="lat=51.417304&lon=-0.876487", place="Wokingham", yr="Wokingham")
                                 weatherlookup("#3A", "lat=51.483510&lon=-0.263249", "Chiswick", "Chiswick")
                                 weatherlookup("#3A", "lat=51.292911&lon=-0.777580", "Cove", "Cove")
@@ -44,7 +46,7 @@
         </div>
     </div>
     <footer>
-        <a href="https://github.com/slandersson">github</a>
+      Colours are based on predicted rainfall.  <a href="https://github.com/slandersson">github</a>
     </footer>
 </body>
 

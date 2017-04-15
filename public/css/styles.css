@@ -6,14 +6,17 @@ body {
     background-color: #fffdf9;
 }
 
+.sub {
+  font-size: 20px;
+}
 h1 {
-    font-size: 50px;
+    font-size: 60px;
 }
 
 .icons {
     height: 57px;
-    margin-top: -19px;
-    margin-bottom: -43px;
+    margin-top: -13px;
+    margin-bottom: -2px;
 }
 .dropdown-menu {
   font-size: 18px;
@@ -23,8 +26,10 @@ h1 {
 }
 
 .table {
-    text-align: center;
-    width: auto;
+  text-align: center;
+  width: auto;
+  font-size: 22px;
+  height: 73%;
 }
 
 td, th {
@@ -44,13 +49,17 @@ th {
 .modal-dialog {
     top: 30%;
 }
+.dropdown-header {
+    display: block;
+    padding: 3px 20px;
+    font-size: 15px;
+  }
 
 .hero {
     background-image: url(../img/rainylords.jpg);
     background-repeat: no-repeat;
     background-size: cover;
     background-position: center center;
-    padding: 50px;
     min-height: 100%;
     position: relative;
 }
@@ -66,9 +75,9 @@ th {
 
 .hero-content {
     position: absolute;
-    top: 40%;
+    top: 35%;
     text-align: center;
-    width: 92%;
+    width: 100%;
 }
 
 .hero-content h2 {
@@ -85,6 +94,7 @@ th {
 #backbutton {
     background-color: #5d2f1d;
     border-color: #684905;
+    font-size: 30;
 }
 
 .hero-content .btn {
@@ -92,6 +102,7 @@ th {
     padding: 20px 30px;
     background-color: #5d2f1d;
     border-color: #684905;
+    padding: 10px;
 }
 
 footer {

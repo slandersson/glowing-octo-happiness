@@ -1,3 +1,18 @@
+var month = new Array();
+month[0] = "January";
+month[1] = "February";
+month[2] = "March";
+month[3] = "April";
+month[4] = "May";
+month[5] = "June";
+month[6] = "July";
+month[7] = "August";
+month[8] = "September";
+month[9] = "October";
+month[10] = "November";
+month[11] = "December";
+
+
 function weatherlookup(tableID, lonlat, place, yr) {
   $.getJSON('/js/icons.json', function(data) {
       var icons = data;
@@ -17,6 +32,8 @@ function weatherlookup(tableID, lonlat, place, yr) {
       //replace the data with nicer formats
       if (myDate.getDay() == 6) {  //check for saturday
         items = []
+        var date = []
+        date.push(myDate)
         $.each( data[i], function( key, val ) {
           if (key == "icon"){
             items.push( "<td>" + "<img class=\"icons\" alt="+val + " src="+"http://api.met.no/weatherapi/weathericon/1.1/?symbol="+icons[val]+";is_night=0;content_type=image/svg>" + "</td>" ); //change this to the appropriate images
@@ -47,6 +64,10 @@ function weatherlookup(tableID, lonlat, place, yr) {
         }
       }
     }
+    if (counter<=0){
+        $("#date").append("Saturday " + date[0].getDate()+"th " + month[date[0].getMonth()]);
+        counter++;
+      }
 })
 });
 }
