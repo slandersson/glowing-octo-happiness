@@ -1,4 +1,4 @@
-function weatherlookup(tableID, lonlat, place) {
+function weatherlookup(tableID, lonlat, place, yr) {
   $.getJSON('/js/icons.json', function(data) {
       var icons = data;
   $.getJSON( "/json?" + lonlat , function( data ) {
@@ -37,13 +37,13 @@ function weatherlookup(tableID, lonlat, place) {
         })
         //set colors of rows depending on the rain amount and then append
         if ( rainvalue < 0.5 ) {
-          $(tableID).append( "<tr class = \"success\">" + "<td>" +place+ "</td>" + items + "</tr>");
+          $(tableID).append( "<tr class = \"success\">" + "<td>" +"<a href=https://www.yr.no/place/United_Kingdom/England/"+yr+"  target = \"_blank\">"+place+"</a></td>"+ "</td>" + items + "</tr>");
         }
         else if ( rainvalue < 2 && rainvalue > 0.5 ) {
-          $(tableID).append( "<tr class = \"warning\">" + "<td>" +place+ "</td>" + items + "</tr>");
+          $(tableID).append( "<tr class = \"warning\">" + "<td>" +"<a href=https://www.yr.no/place/United_Kingdom/England/"+yr+" target = \"_blank\">"+place+"</a></td>" + items + "</tr>");
         }
         else if ( rainvalue > 2) {
-          $(tableID).append( "<tr class = \"danger\">" + "<td>" +place+ "</td>" + items + "</tr>");
+          $(tableID).append( "<tr class = \"danger\">" + "<td>" +"<a href=https://www.yr.no/place/United_Kingdom/England/"+yr+" target = \"_blank\">"+place+"</a></td>"+ "</td>" + items + "</tr>");
         }
       }
     }
