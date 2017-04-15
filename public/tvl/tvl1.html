@@ -3,6 +3,7 @@
 <head>
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
     <link rel="stylesheet" type="text/css" href="http://fonts.googleapis.com/css?family=Ubuntu:regular,bold&subset=Latin">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="/css/styles.css">
     <script src="/js/jquery-3.2.1.min.js"></script>
     <script src="/js/yrno-getter.js"></script>
@@ -10,40 +11,43 @@
 
 <body>
     <a href="/" class="btn btn-primary" id="backbutton" role="button">Home</a>
-    <div class="container">
-        <h1>TVL1</h1>The forecast for Saturday. Colours are based on predicted rainfall.<br>
-        Weather forecast from Yr, delivered by the Norwegian Meteorological Institute and NRK
-        <div class="row">
-            <div class="col-sm-10"></div>
+    <div class="row">
+      <div class="col-xs-12 col-md-6 col-lg-9">
+        <h2 id="date">TVL 1 <br> </h2>
+        <p class="sub">Weather forecast from Yr, delivered by the Norwegian Meteorological Institute and NRK</p>
+        <div class="table-responsive">
             <table id="table" class="table table-hover">
                 <thead>
                     <tr>
                         <th></th>
                         <th></th>
                         <th>Rainfall</th>
-                        <th>Temperature</th>
+                        <th>Temp.</th>
                         <th>Humidity</th>
                         <th>Cloud cover</th>
                     </tr>
                 </thead>
-                <tbody id="1">
+                <tbody id="3A">
                             <script>
+                                var counter =0;
                                 weatherlookup(tableID="#3A", lonlat="lat=51.417304&lon=-0.876487", place="Wokingham", yr="Wokingham")
-                                weatherlookup("#1", "lat=51.483510&lon=-0.263249", "Chiswick", "Chiswick")
-                                weatherlookup("#1", "lat=51.292911&lon=-0.777580", "Cove", "Cove")
-                                weatherlookup("#1", "lat=51.378704&lon=-1.352853", "Falkland", "Newbury")
-                                weatherlookup("#1", "lat=51.362455&lon=-0.863435", "Finchampstead", "Finchampstead")
-                                weatherlookup("#1", "lat=51.278655&lon=-0.848606", "Fleet", "Fleet")
-                                weatherlookup("#1", "lat=51.402232&lon=-1.330896", "Newbury", "Newbury")
-                                weatherlookup("#1", "lat=51.479543&lon=-1.057011", "Purley-on-Thames", "Purley")
-                                weatherlookup("#1", "lat=51.500467&lon=-0.858342", "Wargrave", "Wargrave")
-                                weatherlookup("#1", "lat=51.342830&lon=-0.826481", "Yateley", "Yateley")
+                                weatherlookup("#3A", "lat=51.520053&lon=-0.749302", "Boyne Hill", "Chiswick")
+                                weatherlookup("#3A", "lat=51.292911&lon=-0.777580", "Cove", "Cove")
+                                weatherlookup("#3A", "lat=51.378704&lon=-1.352853", "Falkland", "Falkland")
+                                weatherlookup("#3A", "lat=51.362455&lon=-0.863435", "Finch.", "Finchampstead")
+                                weatherlookup("#3A", "lat=51.577859&lon=-0.558214", "GerrardsX", "gerrads%20cross")
+                                weatherlookup("#3A", "lat=51.537618&lon=-0.896451", "Henley", "henley")
+                                weatherlookup("#3A", "lat=51.567166&lon=-0.779094", "Marlow", "Marlow")
+                                weatherlookup("#3A", "lat=51.530321&lon=-0.580412", "Stoke Gr", "Slough")
+                                weatherlookup("#3A", "lat=51.558552&lon=-0.734486", "Cookham D", "Maidenhead")
                                 </script>
                 </tbody>
             </table>
         </div>
     </div>
+  </div>
     <footer>
+      Row colours are based on predicted rainfall.<br> <0.5mm Green, <2mm Amber, >2mm Red.
         <a href="https://github.com/slandersson">github</a>
     </footer>
 </body>

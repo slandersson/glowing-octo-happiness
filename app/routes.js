@@ -11,6 +11,9 @@ router.get('/', function(req,res) {
   res.sendFile(path.join(__dirname, '../public/index.html'))
 });
 
+router.get('/tvl/1', function(req,res) {
+  res.sendFile(path.join(__dirname, '../public/tvl/tvl1.html'))
+});
 
 router.get('/tvl/3a', function(req,res) {
   res.sendFile(path.join(__dirname, '../public/tvl/tvl3a.html'))
