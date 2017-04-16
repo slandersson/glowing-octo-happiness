@@ -7,15 +7,15 @@ var router = express.Router();
 module.exports = router;
 
 
-router.get('/', function(req,res) {
+router.get('/', function(req, res) {
   res.sendFile(path.join(__dirname, '../public/index.html'))
 });
 
-router.get('/tvl/1', function(req,res) {
+router.get('/tvl/1', function(req, res) {
   res.sendFile(path.join(__dirname, '../public/tvl/tvl1.html'))
 });
 
-router.get('/tvl/3a', function(req,res) {
+router.get('/tvl/3a', function(req, res) {
   res.sendFile(path.join(__dirname, '../public/tvl/tvl3a.html'))
 });
 
@@ -27,14 +27,14 @@ router.get('/tvl/3a', function(req,res) {
 // location.getForecastForTime(time, cb);
 // query usage is /json?lat=50&lon=0
 
-router.get('/json', function(req,res) {
+router.get('/json', function(req, res) {
   yrno.getWeather({
-  lat: req.query.lat,
-  lon: req.query.lon
+    lat: req.query.lat,
+    lon: req.query.lon
   }, function(err, weather) {
-  // Weather for next seven days (Array with five object)
-  weather.getSevenDaySummary(function(err, summary) {
-    res.json(summary)
-  })
-});
+    // Weather for next seven days (Array with five object)
+    weather.getSevenDaySummary(function(err, summary) {
+      res.json(summary)
+    })
+  });
 });
