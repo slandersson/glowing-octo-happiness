@@ -1,6 +1,6 @@
 var express = require('express');
 var path = require('path');
-var yrno = require('yr.no-forecast');
+var yrno = require('yr.no-forecast'); //use my forked version with 7+ day forecast
 // create router object
 var router = express.Router();
 
@@ -20,24 +20,21 @@ router.get('/tvl/3a', function(req,res) {
 });
 
 
-// json file from URL lat + long. The available options are:
-// // Current conditions
+// json file from URL lat + long. The other available options are:
+// # Current conditions
 // location.getCurrentSummary(cb);
-// // Weather anytime from now till future
+// # Weather anytime from now till future
 // location.getForecastForTime(time, cb);
+// query usage is /json?lat=50&lon=0
 
 router.get('/json', function(req,res) {
   yrno.getWeather({
   lat: req.query.lat,
   lon: req.query.lon
   }, function(err, weather) {
-  // Weather for next five days (Array with five object)
+  // Weather for next seven days (Array with five object)
   weather.getSevenDaySummary(function(err, summary) {
     res.json(summary)
   })
 });
-});
-
-router.get('/begin', function(req,res) {
-  res.sendFile(path.join(__dirname, '../public/begin.html'))
 });
