@@ -135,8 +135,13 @@ th {
     padding: 20px 30px;
     background-color: #5d2f1d;
     border-color: #684905;
-    padding: 10px;
+    padding: 19px;
+    font-size: 34px;
 }
+.dropdown-toggle:active, .open .dropdown-toggle {
+        background:#5d2f1d !important;
+        color:white !important;
+    }
 
 footer {
     text-align: right;
