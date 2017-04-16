@@ -6,6 +6,12 @@
     margin:0px;
   }
 }
+ .hero {
+   background:url(../img/rainylords.jpg) no-repeat;background-size:cover;
+   -webkit-background-size: cover;
+   -moz-background-size: cover;
+   -o-background-size: cover;
+   height:100%;}
 
 html, body {
   overflow-x: hidden;
