@@ -49,26 +49,27 @@ function weatherlookup(tableID, lonlat, place, yr) {
             }
           })
           //set colors of rows depending on the rain amount and then append
+          id = place.split(' ')[0] //use the first word in the place name as row ID
           if (rainvalue < 0.5) {
-            $(tableID).append("<tr class = \"success\" id=" + place + " href=https://www.yr.no/place/United_Kingdom/England/" + yr + ">" + "<td class = \"place\">" + place + "</td>" + "</td>" + items + "</tr>");
+            $(tableID).append("<tr class = \"success\" id=" + id + " href=https://www.yr.no/place/United_Kingdom/England/" + yr + ">" + "<td class = \"place\">" + place + "</td>" + "</td>" + items + "</tr>");
             $(document).ready(function() {
-              $('#' + place).click(function() {
+              $('#' + id).click(function() {
                 window.location = $(this).attr('href');
                 return false;
               });
             });
           } else if (rainvalue < 2 && rainvalue > 0.5) {
-            $(tableID).append("<tr class = \"warning\" id=" + place + " href=https://www.yr.no/place/United_Kingdom/England/" + yr + ">" + "<td class = \"place\">" + place + "</td>" + "</td>" + items + "</tr>");
+            $(tableID).append("<tr class = \"warning\" id=" + id + " href=https://www.yr.no/place/United_Kingdom/England/" + yr + ">" + "<td class = \"place\">" + place + "</td>" + "</td>" + items + "</tr>");
             $(document).ready(function() {
-              $('#' + place).click(function() {
+              $('#' + id).click(function() {
                 window.location = $(this).attr('href');
                 return false;
               });
             });
           } else if (rainvalue > 2) {
-            $(tableID).append("<tr class = \"danger\" id=" + place + " href=https://www.yr.no/place/United_Kingdom/England/" + yr + ">" + "<td class = \"place\">" + place + "</td>" + "</td>" + items + "</tr>");
+            $(tableID).append("<tr class = \"danger\" id=" + id + " href=https://www.yr.no/place/United_Kingdom/England/" + yr + ">" + "<td class = \"place\">" + place + "</td>" + "</td>" + items + "</tr>");
             $(document).ready(function() {
-              $('#' + place).click(function() {
+              $('#' + id).click(function() {
                 window.location = $(this).attr('href');
                 return false;
               });
