@@ -101,6 +101,11 @@ th {
 .container {
     background-color: #fffdf9;
 }
+.scrollable-menu {
+    height: auto;
+    max-height: 200px;
+    overflow-x: hidden;
+}
 
 .jumbotron {
     background-color: #fffdf9;
@@ -117,6 +122,10 @@ th {
 .hero-content h2 {
     color: #FFF;
     font-size: 80px
+}
+
+.affix {
+    top: 20px;
 }
 
 .hero-content p {
