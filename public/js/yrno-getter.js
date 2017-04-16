@@ -65,7 +65,7 @@ function weatherlookup(tableID, lonlat, place, yr) {
       }
     }
     if (counter<=0){
-        $("#date").append("Saturday " + date[0].getDate()+"th " + month[date[0].getMonth()]);
+        $("#date").append("Saturday " + date[0].getDate() + month[date[0].getMonth()]);
         counter++;
       }
 })
